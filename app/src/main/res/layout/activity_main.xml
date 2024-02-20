@@ -1,18 +1,77 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/val1"
+        android:layout_width="372dp"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_margin="20sp"
+        android:hint="val 1"
+        android:inputType="number" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/val2"
+        android:layout_width="377dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:hint="val 2" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnplus"
+            android:layout_width="70sp"
+            android:layout_height="wrap_content"
+            android:layout_margin="10sp"
+            android:layout_marginLeft="20sp"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnsous"
+            android:layout_width="70sp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10sp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginBottom="10sp"
+            android:layout_toRightOf="@id/btnplus"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btnmul"
+            android:layout_width="70sp"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/btnsous"
+            android:layout_margin="10sp"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btndiv"
+            android:layout_width="70sp"
+            android:layout_height="wrap_content"
+           android:layout_toRightOf="@id/btnmul"
+            android:layout_margin="10sp"
+            android:text="/" />
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/res"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="res"
+        android:textSize="60sp"
+        android:textStyle="italic" />
+
+</LinearLayout>
